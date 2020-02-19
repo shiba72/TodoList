@@ -1,2 +1,3 @@
-runtime: nodejs
-env: flex
+runtime: nodejs10
+beta_settings:
+  cloud_sql_instances: root-clone
