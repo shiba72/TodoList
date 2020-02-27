@@ -5,7 +5,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   //host: "127.0.0.1",
   //port: 3307,
-  socketPath: `/cloudsql/${"oceanic-airway-268105:us-central1:root-clone"}`,
+  socketPath: `/cloudsql/${"oceanic-airway-268105:us-central1:root"}`,
   user: "root",
   password: "Kid1214",
   database: "todo_db"
@@ -15,5 +15,10 @@ var connection = mysql.createConnection({
 router.get("/", function(req, res, next) {
   res.render("index", { title: "Express" });
 });
+
+router.get("/test", function(req, res, next) {
+  return res.json("test");
+});
+
 
 module.exports = router;
